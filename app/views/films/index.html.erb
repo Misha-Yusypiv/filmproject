@@ -1,0 +1,15 @@
+<%= render 'shared/header' %>
+<h2>All Films</h2>
+
+<% @films.each do |film| %>
+  <div>
+    <h2><%= film.title %></h2>
+    <p><%= film.description %></p>
+    <p><%= film.duration %> minutes</p>
+    <p><%= film.director %></p>
+    <p><%= film.year_of_creation %></p>
+    <p><%= film.genres %></p>
+    <%= link_to "Edit", edit_film_path(film) %>
+    <%= link_to "Delete", film_path(film), method: :delete, data: { confirm: "Are you sure you want to delete this film?" } %>
+  </div>
+<% end %>

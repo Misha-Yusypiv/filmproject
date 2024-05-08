@@ -1,0 +1,9 @@
+<%= render 'shared/header' %>
+<h2>Delete Film</h2>
+<p><strong>Title:</strong> <%= @film.title %></p>
+<p><strong>Description:</strong> <%= @film.description %></p>
+<p><strong>Duration:</strong> <%= @film.duration %> minutes</p>
+<p><strong>Director:</strong> <%= @film.director %></p>
+<p><strong>Year of Creation:</strong> <%= @film.year_of_creation %></p>
+<p><strong>Genres:</strong> <%= @film.genres %></p>
+<%= button_to "Confirm Delete", film_path(@film), method: :delete, data: { confirm: "Are you sure?" } %>
